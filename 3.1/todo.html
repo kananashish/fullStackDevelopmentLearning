@@ -6,7 +6,29 @@
     <title>TODO</title>
 </head>
 <body>
+    <h1>ToDo List</h1>
     <input type="text">
-    <button onclick="addTo()">Add ToDo!</button>
+    <button onclick="addTodo()">Add ToDo!</button>
 </body>
+<script>
+        let ctr = 1
+
+        function deleteTodo(index) {
+            let element = document.getElementById(index)
+            element.parentNode.removeChild(element)
+        }
+
+        function addTodo() {
+            let inputEl = document.querySelector("input")
+            let value = inputEl.value;
+
+            let newDivEl = document.createElement("div") 
+            newDivEl.setAttribute("id",ctr)
+            newDivEl.innerHTML = "<div>" + value + '</div><button onclick="deleteTodo(' + ctr + ')">delete</button></div>'
+
+            document.querySelector("body").appendChild(newDivEl)
+            ctr = ctr + 1
+        }
+
+</script>
 </html>
