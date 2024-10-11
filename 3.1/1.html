@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Understanding DOM</title>
+    </head>
+    <body>
+        <h1>Sample Heading</h1>
+        <div class="main">
+            <p>Sample Paragraph</p>
+        </div>
+        <input type="button" onclick="changeText()" value="Click Me">
+    </body>
+    <script>
+        function changeText() {
+            document.querySelector(".main").innerHTML = "<p>Paragraph Changed</p>"
+        }
+    </script>
+</html>
