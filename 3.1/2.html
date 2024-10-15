@@ -6,46 +6,37 @@
     <title>TODO Website</title>
 </head>
 <body>
+    <div id="heading">
+        <h1>TODO List</h1>
+    </div>
     <div id="main">
-        <div id="heading">
-            <h1>TODO List</h1>
-            
-        </div>
-        <div id="todo-1">
+        <!-- <div id="todo-1">
             <h4>Go to Gym.</h4>
             <button onclick="deleteTODO(1)">Delete</button>
         </div>
         <div id="todo-2">
             <h4>Buy vegetables</h4>
             <button onclick="deleteTODO(2)">Delete</button>
-        </div>
+        </div> -->
     </div>
     <div>
         <input id="input" type="text">
         <button onclick="addTODO()">Add to List</button>
     </div>
-    
 </body>
 <script>
-    currentIndex = 3
+    let currentIndex = 1;
     function addTODO() {
-        const inputEl = document.getElementById("input")
-        const textNode = document.createElement("div")
-        textNode.innerHTML = "<div id='todo-" + currentIndex + "'><h4>" + inputEl.value + '</h4><button onclick="deleteTODO(' + currentIndex + ') ">Delete</button>';
-        // textNode.innerHTML = "<h4>" + inputEl.value + "</h4>"
-        const parentEl = document.getElementById("main")
-        parentEl.appendChild(textNode)
-        currentIndex = currentIndex + 1
+        const inputEl = document.getElementById("input");
+        const textNode = document.createElement("div");
+        textNode.innerHTML = "<div id='todo-" + currentIndex + "'>" + "<h4>" + inputEl.value + "</h4>" + "<button onclick='deleteTODO(" + currentIndex + ")'>Delete</button></div>";
+        const parentEl = document.getElementById("main");
+        parentEl.appendChild(textNode);
+        currentIndex++;
     }
     function deleteTODO(index) {
-        const element = document.getElementById("todo-" + index)
-        element.parentNode.removeChild(element)
+        const element = document.getElementById("todo-" + index);
+        element.parentNode.removeChild(element);
     }
-    // function addTODO() {
-    //     const val = document.querySelector("input").innerHTML
-    //     document.appendChild(val.value)
-    // }
-    // const firstTODO = document.querySelector("h4")
-    // firstTODO.innerHTML = "Don't go to gym."
 </script>
 </html>

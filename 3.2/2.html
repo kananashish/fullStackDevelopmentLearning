@@ -1,0 +1,35 @@
+<!-- Practice to make a Todo Website -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice TODO Website</title>
+ </head>
+ <body>
+    <input id="inp" type="text">
+    <button onclick="addTODO()">Add TODO</button>
+    <div id="todos">
+
+    </div>
+ </body>
+
+ <script>
+    let index = 1
+    function addTODO() {
+        const inputEl = document.getElementById("inp");
+        const listNode = document.createElement("div");
+        listNode.innerHTML = "<div id='index'>" + inputEl.value + "<button onclick='deleteTODO(index)'>DELETE</button></div>";
+        const parentEl = document.getElementById("todos");
+        parentEl.appendChild(listNode);
+        index += 1;
+
+    }
+    function deleteTODO() {
+        const element = document.getElementById("index")
+        const parentNode = document.getElementById("todos")
+        element.parentNode.removeChild(element)
+    }
+ </script>
+
+ </html>
