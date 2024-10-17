@@ -1,6 +1,8 @@
 <body>
     <input type="text">
     <button onclick="addTodo()">Add Todo</button>
+    <button onclick="deleteLastTodo()">Delete Last Todo</button>
+    <button onclick="deleteFirstTodo()">Delete First Todo</button>
     <div id="todoList"></div>
     
     <script>
@@ -12,18 +14,40 @@
             render();
         }
 
+        function deleteLastTodo() {
+            todos.splice(todos.length - 1, 1)
+            render();
+        }
+
+        function deleteFirstTodo() {
+            todos.splice(0, 1)
+            render();
+        }
+
+        function deleteTodo() {
+            todos.splice(0,1);
+            render();
+        }
+
+
+
+        function createComponent(todo) {
+            const divEl = document.createElement("div")       
+            const inputEl = document.createElement("h1")
+            const buttonEl = document.createElement("button")
+            inputEl.innerHTML = todo.title;
+            buttonEl.innerHTML = "Delete";
+            buttonEl.onclick = "deleteTodo()"   
+            divEl.append(inputEl)
+            divEl.append(buttonEl)
+            return divEl;
+        }
+
         function render() {
             document.querySelector("#todoList").innerHTML = "";
             for(let i = 0; i < todos.length; i++) {
-                todo = todos[i];
-                const divEl = document.createElement("div")       
-                const inputEl = document.createElement("h1")
-                const buttonEl = document.createElement("button")
-                inputEl.innerHTML = todo.title;
-                buttonEl.innerHTML = "Delete";
-                divEl.append(inputEl)
-                divEl.append(buttonEl)
-                document.querySelector("#todoList").appendChild(divEl)
+                const element = createComponent(todos[i])
+                document.querySelector("#todoList").appendChild(element)
             }
         }
     </script>
