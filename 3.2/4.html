@@ -29,15 +29,19 @@
             render();
         }
 
+        function deleteTodoAt(index) {
+            todos.splice(index,1);
+            render();
+        }
 
 
-        function createComponent(todo) {
+        function createComponent(todo , index) {
             const divEl = document.createElement("div")       
             const inputEl = document.createElement("h1")
             const buttonEl = document.createElement("button")
             inputEl.innerHTML = todo.title;
             buttonEl.innerHTML = "Delete";
-            buttonEl.onclick = "deleteTodo()"   
+            buttonEl.setAttribute("onclick", "deleteTodoAt(" + index + ")");   
             divEl.append(inputEl)
             divEl.append(buttonEl)
             return divEl;
@@ -46,7 +50,7 @@
         function render() {
             document.querySelector("#todoList").innerHTML = "";
             for(let i = 0; i < todos.length; i++) {
-                const element = createComponent(todos[i])
+                const element = createComponent(todos[i] , i)
                 document.querySelector("#todoList").appendChild(element)
             }
         }
