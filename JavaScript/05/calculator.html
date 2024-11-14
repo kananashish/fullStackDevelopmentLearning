@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <p>Calculator</p>
+    <p>
+        <button onclick="put1()">1</button>
+        <button onclick="put2()">2</button>
+        <button onclick="put3()">3</button>
+        <button onclick="add()">+</button>
+    </p>
+    <p>
+        <button onclick="put4()">4</button>
+        <button onclick="put5()">5</button>
+        <button onclick="put6()">6</button>
+        <button onclick="sub()">-</button>
+    </p>
+    <p>
+        <button onclick="put7()">7</button>
+        <button onclick="put8()">8</button>
+        <button onclick="put9()">9</button>
+        <button onclick="mul()">*</button>
+    </p>
+    <p>
+        <button onclick="put0()">0</button>
+        <button onclick="decimal()">.</button>
+        <button onclick="result()">=</button>
+        <button onclick="div()">/</button>
+    </p>
+    <button onclick="clearConsole()">Clear</button>
+    
+
+    <script>
+        let calculation = '';
+        function put1() {
+            calculation += 1;
+            console.log(calculation)
+        }
+        function put2() {
+            calculation += 2;
+            console.log(calculation)
+        }
+        function put3() {
+            calculation += 3;
+            console.log(calculation)
+        }
+        function put4() {
+            calculation += 4;
+            console.log(calculation)
+        }
+        function put5() {
+            calculation += 5;
+            console.log(calculation)
+        }
+        function put6() {
+            calculation += 6;
+            console.log(calculation)
+        }
+        function put7() {
+            calculation += 7;
+            console.log(calculation)
+        }
+        function put8() {
+            calculation += 8;
+            console.log(calculation)
+        }
+        function put9() {
+            calculation += 9;
+            console.log(calculation)
+        }
+        function put0() {
+            calculation += 0;
+            console.log(calculation)
+        }
+        function add() {
+            calculation += ' + ';
+            console.log(calculation)
+        }
+        function sub() {
+            calculation += ' - ';
+            console.log(calculation)
+        }
+        function mul() {
+            calculation += ' * ';
+            console.log(calculation)
+        }
+        function div() {
+            calculation += ' / ';
+            console.log(calculation)
+        }
+        function result() {
+            calculation = eval(calculation);
+            console.log(calculation);
+        }
+        function clearConsole() {
+            calculation = ''
+            console.log('Console reset.');
+        }
+    </script>
+</body>
+
+</html>
