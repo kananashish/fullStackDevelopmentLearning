@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #addtocart {
+        background: yellow;
+    }
+    #buynow {
+        background:orange
+    }
+</style>
+<body>
+    <p>Adults Plain Cotton T-Shirt</p>
+    <p>Price:$7.99</p>
+    <button id="addtocart" onclick="addedItem()">Add to cart</button>
+    <button id="buynow" onclick="buyNow()">Buy now</button>
+    <script>
+        function addedItem() {
+            alert('Added')
+        }
+        function buyNow() {
+            console.log('Loading...')
+            alert('Purchased');
+        }
+    </script>
+</body>
+</html>
