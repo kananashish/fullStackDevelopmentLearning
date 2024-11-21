@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function convertToFarenheit(celsius) {
+            const farenheit = (celsius * 9/5) + 32;
+            console.log(farenheit);
+        }
+
+        function convertToCelsius(farenheit) {
+            const celsius = (farenheit - 32) * 5/9;
+            console.log(celsius);
+        }
+
+        function convertTemperature(degree, unit) {
+            if(unit = 'celsius') {
+                const celsius = (degree - 32) * 5/9;
+                console.log(celsius);
+            }
+            else if(unit = 'farenheit') {
+                const farenheit = (degree * 9/5) + 32;
+                console.log(farenheit);
+            }
+        }
+
+        convertToFarenheit(25);
+        convertToCelsius(86);
+
+        convertTemperature(25, 'farenheit');
+        convertTemperature(86,'celsius');   
+
+    </script>
+</body>
+</html>
