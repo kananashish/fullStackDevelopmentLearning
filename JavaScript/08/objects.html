@@ -10,13 +10,43 @@
 
     <script>
         const product2 = {
-            name : 'shirt'
+            name : 'shirt',
+            //brackets are optional
+            //'delivery-time' : '2 days' => This is also correct
+            ['delivery-time'] : '2 days',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('Function inside object');
+            }
         };
 
         console.log(product2);
         console.log(product2.name);
         console.log(typeof product2);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
         
+        console.log(product2.rating);
+        console.log(product2.rating.count);
+        console.log(product2.fun());
+        console.log(product2.fun);
+        product2.fun();
+
+        console.log(typeof console);
+        console.log(console);
+        console.log(console.log());
+        console.log(typeof console.log);   
+        
+        //conversion of JS(javascript) to json(javascript object notation)
+        console.log(JSON.stringify(product2));
+        console.log(typeof JSON.stringify(product2));
+
+        //conversion of json to js
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
     </script>
 </body>
 </html>
