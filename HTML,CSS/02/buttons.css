@@ -1,0 +1,41 @@
+#uber {
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 1px;
+    border: none;
+    margin-right: 8px;
+    transition: opacity 0.15s;
+}
+
+#uber:hover {
+    opacity: 0.7;
+}
+
+#uber:active {
+    opacity: 0.4;
+}
+
+#amazon {
+    background-color: rgb(255, 255, 0);
+    color: black;
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+#github {
+    background-color: green;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+}

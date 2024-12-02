@@ -1,0 +1,11 @@
+button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+button:hover {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,25 @@
+p {
+    font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 250px;
+}
+.heading-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+.subheading-text {
+    color: grey;
+    font-size: 16px;
+}
+.content-text {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.getStarted-button {
+    background-color: rgb(6, 162, 6);
+    color: white;
+    border: none;
+    padding: 6px 10px 6px 10px;
+    border-radius: 5px;
+}
