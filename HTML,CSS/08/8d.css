@@ -1,0 +1,35 @@
+input {
+    padding: 5px 0px 5px 10px;
+    border-radius: 5px;
+    border-width: thin;
+    border-style: solid;
+    border-color: grey;
+}
+
+#firstname-input {
+    width:97px;
+    
+}
+#lastname-input {
+    width: 97px;
+}
+#email-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 210px;
+}
+#signup-button {
+    width: 220px;
+    background-color: rgb(18, 94, 246);
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#signup-button:hover {
+    opacity: 0.8;
+}
+#signup-button:active {
+    opacity: 0.5;
+}
