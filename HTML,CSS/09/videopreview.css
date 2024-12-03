@@ -1,0 +1,54 @@
+
+/* Styling image and text */
+
+.image {
+    width: 280px;
+    display: block;
+}
+
+p {
+
+    font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+.video-title {
+
+    font-weight: bold;
+    font-size: 18px;
+    width: 280px;
+    line-height: 24px;
+    margin-bottom: 2px;
+
+}
+
+.video-stats {
+
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 16px;
+
+}
+
+.video-creator {
+
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 20px;
+
+}
+
+/* styling the div */
+.video-preview {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+/* Styling the search box */
+
+#searchbox-input {
+    display: block;
+}
