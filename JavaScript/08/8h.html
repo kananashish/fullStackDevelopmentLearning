@@ -37,7 +37,8 @@
     
 
     <script>
-        let calculation = '';
+
+        let calculation = localStorage.getItem('calculation') || '';
         function put(value) {
             if(value === '1') {
                 calculation += 1;
@@ -114,6 +115,7 @@
             console.log('Console reset.');
         }
         
+        localStorage.setItem('calculation', calculation);
     </script>
 </body>
 
