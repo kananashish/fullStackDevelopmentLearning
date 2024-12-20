@@ -1,9 +1,8 @@
-
 /* Styling image and text */
 
 .image {
-    width: 300px;
-    display: block;
+    width: 100%;
+   
 }
 
 p {
@@ -41,28 +40,30 @@ p {
 
 }
 
-.video-preview {
-    width: 300px;
+/* .video-preview {
+    width: 100%;
     display: inline-block;
     vertical-align: top;
     margin-right: 15px;
-} 
+} */
 
 .video-info-grid {
     display: grid;
     grid-template-columns: 50px 1fr;
 }
 
-.channel-picture {
-    /* display: inline-block;
+/*
+ .channel-picture {
+    display: inline-block;
     width: 50px;
-    vertical-align: top; */
+    vertical-align: top;
 }
 
 .video-info {
-    /* display: inline-block;
-    width: 200px; */
-}
+     display: inline-block;
+    width: 200px; 
+} 
+*/
 
 .profile-picture {
     width: 40px;
@@ -79,3 +80,11 @@ p {
     display: block;
 }
 
+
+/* styling grid preview */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
