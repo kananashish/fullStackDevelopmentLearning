@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /* Styling image and text */
 
 .image {
@@ -74,13 +78,6 @@ p {
     margin-bottom: 12px;
 }
 
-/* Styling the search box */
-
-#searchbox-input {
-    display: block;
-}
-
-
 /* styling grid preview */
 .video-grid {
     display: grid;
@@ -88,3 +85,13 @@ p {
     column-gap: 16px;
     row-gap: 40px;
 }
+
+
+
+/* Styling the header */
+
+.header {
+    height: 55px;
+}
+
+
