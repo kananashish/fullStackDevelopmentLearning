@@ -1,0 +1,63 @@
+<!-- 
+ Postion fixed : places on the browser window
+Postion absolute : places on the page 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+            padding-top: 60px;
+            padding-left: 80px;
+        }
+        #header {
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0px;
+            left: 0;
+            right: 0;
+            height: 50px;
+        }
+        #sidebar {
+            background-color: green;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 50px;
+            width: 72px;        
+        }
+        #div1 {
+            background-color: lightblue;
+            height: 100px;
+            width: 200px;
+        }
+        #div2 {
+            background-color: lightpink;
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        header
+    </div>
+    <div id="sidebar">
+        sidebar
+    </div>
+    <div id="div1">
+        div1
+    </div>
+    <div id="div2">
+        div2
+    </div>
+</body>
+</html>
