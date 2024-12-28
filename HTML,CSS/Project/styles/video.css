@@ -5,7 +5,7 @@
     width: 250px;
     line-height: 20px;
     margin-top: 0px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 
 }
 
@@ -51,13 +51,13 @@
 */
 
 .profile-picture {
-    width: 40px;
+    width: 36px;
     border-radius: 50px;
 }
 
 .thumbnail-row {
-    margin-bottom: 12px;
-    position:relative;
+    margin-bottom: 8px;
+    position: relative;
 }
 
 /* styling grid preview */
@@ -68,15 +68,33 @@
     row-gap: 40px;
 }
 
+@media (max-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 730px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1360px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
 .video-time {
-    font-family: Roboto,Arial;
+    font-family: Roboto, Arial;
     font-size: 13px;
     font-weight: 500;
     padding: 4px;
     border-radius: 4px;
     background-color: black;
     color: white;
-    position:absolute;
+    position: absolute;
     bottom: 8px;
     right: 5px;
 }
