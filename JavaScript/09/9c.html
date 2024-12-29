@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pick('heads')">Heads</button>
+    <button onclick="pick('tails')">Tails</button>
+    <button onclick="reset()">Reset screen</button>
+    <p class="js-result-display"></p>
+
+    <script>
+        function pick(move) {
+            document.querySelector('.js-result-display').innerHTML = `You chose: ${move}`;
+        }
+        function reset() {
+            document.querySelector('.js-result-display').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

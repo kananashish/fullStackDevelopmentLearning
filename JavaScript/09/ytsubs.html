@@ -11,12 +11,13 @@
 
     <script>
         function ops() {
+            // innerText property checks on the text inside the html specifically
             const buttonElement = document.querySelector('button');
-            if(buttonElement.innerHTML === 'Subscribe') {
-                buttonElement.innerHTML = 'Subscribed';
+            if(buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
             }
             else {
-                buttonElement.innerHTML = 'Subscribe'; 
+                buttonElement.innerText = 'Subscribe'; 
             }
         }
     </script>

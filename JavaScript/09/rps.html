@@ -26,8 +26,9 @@
             ties: 0
         };
         
-        update
         updateScoreElement();
+
+        
 
         function pickComputerMove() {
             const randomNumber = Math.random();
@@ -99,9 +100,13 @@
             localStorage.setItem('score', JSON.stringify(score));
 
             updateScoreElement();
+
+            document.querySelector('.js-result').innerHTML = result;
+
+            document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
             
-            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
+//             alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+// Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
 
 
         }
