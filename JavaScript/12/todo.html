@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        #title-info {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .todo-grid,
+        .todo-input-grid {
+            display: grid;
+            grid-template-columns: 200px 150px 100px;
+            column-gap: 10px;
+            row-gap: 10px;
+            align-items: center;
+        }
+        .todo-input-grid {
+            margin-bottom: 10px;
+        }
+        .name-input,
+        .due-date-input {
+            font-size: 15px;
+            padding: 6px;
+        }
+        .add-todo-button,
+        .delete-todo-button {
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .add-todo-button {
+            background-color: green;
+        }
+        .delete-todo-button {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="title-info">Todo List</p>
+    <div class="todo-input-grid">
+        <input type="text" placeholder="Enter name" class="js-name-input name-input">
+        <input type="date" class="js-due-date-input due-date-input">
+        <button onclick="addTodo()" class="add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+    <script>
+        let todoList = [];
+        renderTodoList();
+
+        function renderTodoList() {
+            let todoListHTML = '';
+
+            todoList.forEach(function(todoObject, index) {
+                const { name, dueDate } = todoObject;
+                const html = `
+                <div>${name}</div>
+                <div>${dueDate}</div>
+                <button onclick="
+                todoList.splice(${index},1);
+                renderTodoList();
+                " class="delete-todo-button">Delete</button>
+                `;
+                todoListHTML += html;
+            })
+            /*
+            for (let i = 0; i < todoList.length; i++) {
+                const todoObject = todoList[i];
+                // const name = todoObject.name;
+                // const dueDate = todoObject.dueDate;
+                //shortcut for above lines called destructuring
+                const { name, dueDate } = todoObject;
+
+                const html = `
+                <div>${name}</div>
+                <div>${dueDate}</div>
+                <button onclick="
+                todoList.splice(${i},1);
+                renderTodoList();
+                " class="delete-todo-button">Delete</button>
+                `;
+                todoListHTML += html;
+            }
+            */
+            console.log(todoListHTML);
+
+            document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+        }
+
+
+        function addTodo() {
+            const inputElement = document.querySelector('.js-name-input');
+            const name = inputElement.value;
+            const dateInputElement = document.querySelector('.js-due-date-input');
+            const dueDate = dateInputElement.value;
+            todoList.push({
+                // name: name,
+                // dueDate: dueDate
+                //shorthand property shortcut
+                name,
+                dueDate
+            });
+            console.log(todoList);
+
+            inputElement.value = '';
+            renderTodoList();
+        }
+    </script>
+</body>
+
+</html>
