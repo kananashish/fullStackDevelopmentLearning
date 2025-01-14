@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+
+<body>
+    <button onclick="messageUpdate('add')">Add a message</button>
+    <button onclick="messageUpdate('del')">Delete a message</button>
+    <script>
+
+        let message = 0;
+        function messageUpdate(value) {
+            if (value === 'add') {
+                message++;
+            }
+            else {
+                message--;
+            }
+        }
+
+
+        let isAlert = false;
+        let intervalId;
+        intervalId = setInterval(function () {
+            if (message >= 0) {
+                if (!isAlert) {
+                    isAlert = true;
+                    document.title = `(${message}) New Messages`;
+                } else {
+                    isAlert = false;
+                    document.title = 'App';
+                }
+            }
+            else {
+                clearInterval(intervalId);
+                document.title = 'App';
+                isAlert = false;
+            }
+
+
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>
