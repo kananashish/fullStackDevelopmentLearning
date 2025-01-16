@@ -14,12 +14,15 @@
             setTimeout(function() {
                 if(inputElement.innerHTML === 'Loading...') {
                     inputElement.innerHTML = 'Finished!';
-                } else {
-                    inputElement.innerHTML = 'Start';
-                }
+                } 
                 
             },1000);
-            inputElement.innerHTML = 'Loading...';
+            if(inputElement.innerHTML === 'Start'){
+                inputElement.innerHTML = 'Loading...';
+            } 
+            else if(inputElement.innerHTML === 'Finished!'){
+                    inputElement.innerHTML = 'Start';
+            }
         }
     </script>
 </body>

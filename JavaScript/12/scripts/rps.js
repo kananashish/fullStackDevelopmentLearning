@@ -30,7 +30,7 @@ let intervalId;
 function autoplay() {
     if(!isAutoPlaying) {
         isAutoPlaying = true;
-        intervalId = setInterval(function() {
+        intervalId = setInterval(() => {
             const playerMove = pickRandomMove();
             playGame(playerMove);
         }, 2000);
