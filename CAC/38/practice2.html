@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+    <button id="Start">Start</button> <br><br>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    let startSayingName;
+    document.querySelector('#Start').addEventListener('click', () => {
+        startSayingName = setInterval(() => {
+            console.log('Ashish');
+    }, 1000);
+    });
+    //const stopSayingMyName = clearInterval(sayMyName);
+    document.querySelector('#Stop').addEventListener('click', () => {
+        clearInterval(startSayingName);
+        console.log('iteration stopped');
+    })
+    
+</script>
+</html>

@@ -1,0 +1,8 @@
+.innerText -> displays only the portion which is visible to the browser
+
+.innerContent -> displays the portion which is present in html even if it is not visible to the browser
+
+.innerHTML -> displays entire html code including the tags used.
+
+.querySelectorAll gives a nodelist 
+NodeList and HTML Collection are not pure array. Arrays' prototype gives access to map functionality which is lacking in these two.
