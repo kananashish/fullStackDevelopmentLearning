@@ -3,6 +3,7 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 
 
 function App() {
+
   const [length, setLength] = useState(8)
   const [numAllowed, setNumAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
@@ -27,7 +28,7 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select()
-    passwordRef.current?.selectSelectionRange(0,20)
+    passwordRef.current?.selectSelectionRange(0,100)
     window.navigator.clipboard.writeText(password)
   }, [password])
 
@@ -62,7 +63,7 @@ function App() {
             max={50}
             value={length}
             className='cursor-pointer'
-            onChange={(e) => {setLength(e.target.value)}}
+            onChange={(e) => setLength(e.target.value)}
             />
             <label >Length: {length}</label>
           </div>
@@ -71,9 +72,7 @@ function App() {
             type="checkbox"
             defaultChecked = {numAllowed}
             id="numInput"
-            onChange={() => {
-              setNumAllowed((prev) => !prev)
-            }}
+            onChange={() => setNumAllowed((prev) => !prev)}
             />
             <label htmlFor="numInput">Numbers</label>
           </div>
@@ -82,9 +81,7 @@ function App() {
             type="checkbox"
             defaultChecked = {charAllowed}
             id="charInput"
-            onChange={() => {
-              setNumAllowed((prev) => !prev)
-            }}
+            onChange={() => setCharAllowed((prev) => !prev)}
             />
             <label htmlFor="charInput">Characters</label>
           </div>
