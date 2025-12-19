@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice_2</title>
+  </head>
+  <body>
+    <input type="text" placeholder="add your text here" />
+    <button onclick="addTodo()">Add Todo</button>
+    <div id="todoDiv"></div>
+
+    <script>
+      let todos = [];
+      let count = 1;
+      function addTodo() {
+        todos.push({
+          title: document.querySelector("input").value,
+        });
+        render();
+      }
+
+      function deleteTodo(index) {
+        const element = document.querySelector("#todo-" + index);
+        element.parentNode.removeChild(element);
+        render();
+      }
+
+      function createTodoComponent(element) {
+        const divEl = document.createElement("div");
+        const spanEl = document.createElement("span");
+        const buttonEl = document.createElement("button");
+
+        divEl.setAttribute("id", "todo-" + count);
+
+        spanEl.innerHTML = element;
+        buttonEl.innerHTML = "Delete";
+        buttonEl.onclick = function () {
+          deleteTodo(index);
+        };
+
+        divEl.appendChild(spanEl);
+        divEl.appendChild(buttonEl);
+        count++;
+        return divEl;
+      }
+
+      function render() {
+        document.querySelector("#todoDiv").innerHTML = "";
+        for (let i = 0; i < todos.length; i++) {
+          const element = createTodoComponent(todos[i].title);
+          document.querySelector("#todoDiv").appendChild(element);
+        }
+      }
+    </script>
+  </body>
+</html>

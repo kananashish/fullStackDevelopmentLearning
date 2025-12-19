@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_1</title>
+</head>
+<body>
+    <input type="text" placeholder="add text here">
+    <button onclick="addTodo()">Add Todo</button>
+
+    <script>
+        function addTodo() {
+            const inputEl = document.querySelector("input");
+            const value = inputEl.value;
+            
+            const spanEl = document.createElement("span");
+            const deleteEl = document.createElement("button");
+
+            spanEl.innerHTML = value;
+            deleteEl.innerHTML = "Delete";
+
+            const divEl = document.createElement("div");
+
+            divEl.appendChild(spanEl);
+            divEl.appendChild(deleteEl);
+
+            document.querySelector("body").appendChild(divEl);
+            inputEl.value = "";
+        }
+    </script>
+</body>
+</html>
